@@ -5,6 +5,7 @@ import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
 
+
 /*
 * 1 - описать тип MessageType
 * 2 - описать тип MessagePropsType в файле Message.tsx
@@ -14,7 +15,19 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
+type UserType = {
+    avatar:string
+    name:string
+}
+type InnerMessageType = {
+    text: string
+    time: string
+}
+export type MessageType = {
+    id:number
+    user: UserType
+    message: InnerMessageType
+}
 
 // структуру объекта не менять
 export const message0: MessageType = {
