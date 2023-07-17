@@ -1,5 +1,15 @@
 import {UserList} from './UserList';
 
+export type AddressType = {
+	street: string
+	city: string
+}
+export type UserType = {
+	id: number
+	name: string
+	age: number
+	address: AddressType
+}
 export const HW1 = () => {
 
 	// 1️⃣ Раскомментируйте JSX (HW1.tsx, UserList.tsx) и вы увидите,
@@ -34,7 +44,7 @@ export const HW1 = () => {
 
 	return (
 		<div id={'hw01'}>
-			{/*<UserList users={'НАЗВАНИЕ МАССИВА, КОТОРЫЙ МЫ ПЕРЕДАЕМ'} />*/}
+			<UserList users={users} />
 		</div>
 	);
 };
